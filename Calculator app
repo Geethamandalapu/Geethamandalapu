@@ -1,0 +1,42 @@
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+  // Get the reference to the EditText view.
+  EditText editText = findViewById(R.id.editText);
+  // Get the reference to the buttons.
+  Button buttonAdd = findViewById(R.id.buttonAdd);
+  Button buttonSubtract = findViewById(R.id.buttonSubtract);
+  Button buttonMultiply = findViewById(R.id.buttonMultiply);
+  Button buttonDivide = findViewById(R.id.buttonDivide);
+  // Set the click listeners for the buttons.
+  buttonAdd.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+      addNumbers();
+    }
+  });
+  buttonSubtract.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+      subtractNumbers();
+    }
+  });
+  buttonMultiply.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+      multiplyNumbers();
+    }
+  });
+  buttonDivide.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+      divideNumbers();
+    }
+  });
+}
+private void addNumbers
